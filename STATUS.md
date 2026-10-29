@@ -16,14 +16,16 @@ Updated: 2026-10-29 (Asia/Tehran)
 - Tests: 5/5 passed. Production evidence build passed.
 - Confirmed the legacy guessed endpoint `https://docs.pharosnetwork.xyz/mcp` redirects to `https://docs.pharos.xyz/mcp`, where MCP initialization is not accepted. This is transport inspection only, not documentation evidence.
 
-## In progress
+## External blockers
 
-- Publication and deployment.
+- GitHub connector verified that `shoupeorg/pharos-docs-mcp-onboarding` does not yet exist (404). The available connector has no repository-creation operation, and CLI authentication is unavailable in this sandbox.
+- Cloudflare deployment was attempted with Wrangler 4.46 and the current 4.155. Both fail inside this sandbox before upload: `Cannot read directory "../../../../../..": Access is denied` and `Could not resolve ...\\src\\worker.js`. The source file is tracked and its static-asset forwarding behavior is covered by tests. Further sandbox retries were stopped.
+- `scripts/resume-publication.ps1` now resumes only publication, deployment, and public verification from a normal PowerShell terminal.
 
 ## Remaining
 
-- Create/publish the authorized public repository if authenticated tooling permits.
-- Deploy and verify the static report page.
+- Create the empty public repository `shoupeorg/pharos-docs-mcp-onboarding`, then run the stage-specific resume script.
+- The script publishes the exact local commit, deploys the tested static report, and verifies the UI, evidence manifest, Markdown downloads, and logo.
 - A human must submit the saved manual query set in a working Docs MCP session before three documentation gaps or a documented read-only exercise can be claimed.
 
 ## Constraints
