@@ -4,5 +4,5 @@ node_modules/
 .xdg/
 .dev.vars
 dist/
-worker.js
+/worker.js
 npm-debug.log*
