@@ -1,0 +1,26 @@
+{
+  "evidenceVersion": "docs-mcp-onboarding/1.0.0",
+  "id": "user-performed-onboarding-failure",
+  "evidenceType": "USER_PERFORMED_UI_EVIDENCE",
+  "source": "Attached screenshot supplied by the user",
+  "recordedAt": "2026-10-29T00:00:00+03:30",
+  "recordedAtPrecision": "date-only; exact screenshot time not available",
+  "query": "Using only Developer Docs MCP sources, provide a new-user onboarding path for ai.pharos.xyz: how to open the site, authenticate, select the Developer Docs agent, confirm the intended Pharos network, and prepare for a first read-only contract query. Cite every supporting document section or URL. If a step is not documented, label it DOCS_NOT_COVERED and do not guess. Include the exact Docs MCP tool calls and returned source references.",
+  "visibleResponse": [
+    "I'll help you create a new-user onboarding path for ai.pharos.xyz using the Developer Docs MCP sources. Let me first load the Pharos documentation skill to access the available documentation.",
+    "Now I'll query the Pharos documentation to find information about ai.pharos.xyz onboarding. Let me search for relevant documentation.",
+    "Let me search more specifically for ai.pharos.xyz and related authentication topics.",
+    "Let me read the Anvita Flow overview page and the Publish Service Agent page to see what documentation exists about the platform."
+  ],
+  "uiOutcome": [
+    "This session has been reset.",
+    "Something went wrong. Please try again."
+  ],
+  "classification": "AI_PHAROS_UI_ERROR",
+  "cause": "UNKNOWN",
+  "documentationAnswerComplete": false,
+  "sourceCitationsVisible": false,
+  "toolCallDetailsVisible": false,
+  "countsAsDocumentationGap": false,
+  "notes": "The screenshot proves an AI.PHAROS UI error only. It does not prove that the underlying MCP transport failed. The narrative is incomplete and contains no final onboarding answer. This single failure is not counted as a documentation gap."
+}

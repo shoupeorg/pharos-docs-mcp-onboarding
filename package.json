@@ -1,0 +1,14 @@
+{
+  "name": "pharos-docs-mcp-onboarding",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "deploy": "npm run build && npx wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.46.0"
+  }
+}

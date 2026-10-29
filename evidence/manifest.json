@@ -1,0 +1,64 @@
+{
+  "evidenceVersion": "docs-mcp-onboarding/1.0.0",
+  "generatedAt": "2026-10-29T16:00:00+03:30",
+  "sourcePolicy": "Developer Docs MCP responses only for documentation claims; transport and UI observations are labeled separately.",
+  "onboarding": [
+    {
+      "title": "Discover the Docs capability",
+      "detail": "No Developer Docs MCP tool or resource was registered in this runtime.",
+      "status": "BLOCKED",
+      "statusClass": "blocked"
+    },
+    {
+      "title": "Submit the onboarding query",
+      "detail": "The authenticated UI showed an incomplete narrative, then reset with a generic error.",
+      "status": "PARTIAL",
+      "statusClass": "partial"
+    },
+    {
+      "title": "Call the discovered Docs-agent transport",
+      "detail": "A credential-free POST returned HTTP 405 HTML; no Docs answer was returned.",
+      "status": "BLOCKED",
+      "statusClass": "blocked"
+    },
+    {
+      "title": "Run a documented read-only exercise",
+      "detail": "Not run because no complete Docs MCP instruction was obtained.",
+      "status": "BLOCKED",
+      "statusClass": "blocked"
+    }
+  ],
+  "items": [
+    {
+      "id": "registry-audit",
+      "query": "Inspect the current tool and resource registry for Developer Docs MCP.",
+      "outcome": "BLOCKED",
+      "statusClass": "blocked",
+      "completedAt": "2026-10-29T15:40:00+03:30",
+      "file": "v1-runtime-registry-audit.json"
+    },
+    {
+      "id": "user-ui-attempt",
+      "query": "Using only Developer Docs MCP sources, provide a new-user onboarding path for ai.pharos.xyz…",
+      "outcome": "UI ERROR",
+      "statusClass": "partial",
+      "completedAt": "UNKNOWN",
+      "file": "v1-user-performed-onboarding-failure.json"
+    },
+    {
+      "id": "direct-transport-probe",
+      "query": "How do I start a Developer Docs MCP session on ai.pharos.xyz? Return only documentation-backed steps and source references.",
+      "outcome": "HTTP 405",
+      "statusClass": "blocked",
+      "completedAt": "2026-10-29T12:29:53.411Z",
+      "file": "v1-docs-agent-transport-probe.json"
+    }
+  ],
+  "gaps": [],
+  "limitations": [
+    "No complete Developer Docs MCP answer or source citation was returned.",
+    "The authenticated UI error has unknown cause and is not labeled as an MCP transport failure.",
+    "The required documentation-gap count remains 0 of 3 because failures are not documentation evidence.",
+    "No read-only chain exercise was run because no complete Docs MCP instruction was obtained."
+  ]
+}

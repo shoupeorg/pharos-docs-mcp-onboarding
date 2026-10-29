@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pharos Docs MCP Onboarding</title>
+  <link rel="icon" href="/pharos-logo.png" type="image/png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="brandbar">
+    <img src="/pharos-logo.png" alt="Pharos logo">
+    <div><strong>PHAROS</strong><span>Agent Arena Evidence Lab</span></div>
+  </header>
+  <main class="desktop">
+    <section class="window hero" aria-labelledby="page-title">
+      <div class="titlebar">
+        <h1 id="page-title">Pharos Docs MCP Onboarding</h1>
+        <div class="controls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></div>
+      </div>
+      <div class="window-body hero-grid">
+        <div>
+          <p class="eyebrow">FRESH DOCUMENTATION EVIDENCE</p>
+          <p>A reviewer-facing record of a new-user journey built from fresh Developer Docs MCP responses. Documentation gaps are reported, never filled with guesses.</p>
+        </div>
+        <dl class="status-grid">
+          <div><dt>Evidence version</dt><dd id="evidence-version">Loading…</dd></div>
+          <div><dt>Docs source</dt><dd>Developer Docs MCP</dd></div>
+          <div><dt>Execution policy</dt><dd>Read-only</dd></div>
+          <div><dt>Chain spending</dt><dd>None</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="columns">
+      <section class="window">
+        <div class="titlebar"><h2>Onboarding checklist</h2></div>
+        <div class="window-body">
+          <ol id="onboarding-list" class="steps"><li>Loading versioned evidence…</li></ol>
+        </div>
+      </section>
+      <section class="window">
+        <div class="titlebar"><h2>Coverage legend</h2></div>
+        <div class="window-body legend">
+          <p><span class="badge covered">SUPPORTED</span> Backed by a returned docs source.</p>
+          <p><span class="badge partial">PARTIAL</span> Some material steps are undocumented.</p>
+          <p><span class="badge blocked">BLOCKED</span> Fail closed; no execution.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="window">
+      <div class="titlebar"><h2>Fresh query evidence</h2></div>
+      <div class="window-body table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Exact query</th><th>Outcome</th><th>Recorded</th><th>Raw</th></tr></thead>
+          <tbody id="evidence-rows"><tr><td colspan="5">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="window">
+      <div class="titlebar"><h2>Documentation gaps</h2></div>
+      <div class="window-body"><div id="gap-cards" class="gap-grid"><p>Loading…</p></div></div>
+    </section>
+
+    <section class="window">
+      <div class="titlebar"><h2>Scope and limitations</h2></div>
+      <div class="window-body" id="limitations">
+        <p>Documentation claims come only from the Developer Docs MCP responses preserved here. UI and transport observations are clearly separated from documentation evidence.</p>
+        <p><a class="button" href="/onboarding-log.md" download>Download report</a> <a class="button" href="/gaps.md" download>Download gaps</a> <a class="button" href="/evidence/manifest.json" download>Download JSON</a></p>
+      </div>
+      <footer class="statusbar"><span id="manifest-status">Evidence not loaded</span><span>ENGLISH-ONLY PUBLIC REPORT</span></footer>
+    </section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

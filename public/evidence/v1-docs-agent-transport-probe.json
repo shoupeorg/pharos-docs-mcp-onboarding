@@ -1,0 +1,24 @@
+{
+  "evidenceVersion": "docs-mcp-onboarding/1.0.0",
+  "evidenceType": "DOCS_AGENT_TRANSPORT_PROBE",
+  "endpoint": "https://flow.anvita.xyz/api/v1/pharos/chat/completions",
+  "method": "POST",
+  "authenticated": false,
+  "startedAt": "2026-10-29T12:29:49.857Z",
+  "completedAt": "2026-10-29T12:29:53.411Z",
+  "query": "How do I start a Developer Docs MCP session on ai.pharos.xyz? Return only documentation-backed steps and source references.",
+  "requestSchema": {
+    "spaceType": "pharos",
+    "operationType": "chat",
+    "agentType": "PHAROS_DOCS",
+    "sessionId": "<fresh random probe id>",
+    "message": "<exact query>",
+    "requestId": "<fresh random UUID>",
+    "stream": true
+  },
+  "status": 405,
+  "contentType": "text/html; charset=utf-8",
+  "location": null,
+  "bodyFirst300": "<!doctypehtml><html lang=\"zh-cn\"><meta charset=\"utf-8\"><meta http-equiv=\"X-UA-Compatible\"content=\"IE=edge,chrome=1\"><meta name=\"data-spm\"content=\"a3c0e\"><title>405</title><style>a,body,div,h2,html,p{margin:0;padding:0}a{text-decoration:none;color:#3b6ea3}.container{width:1000px;margin:auto;color:#69",
+  "interpretation": "This is the AI.PHAROS Docs-agent chat transport observed in the client. It is not evidence of a public Developer Docs MCP endpoint or a documentation answer. No browser credential was read or sent."
+}

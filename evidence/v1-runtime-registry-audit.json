@@ -1,0 +1,16 @@
+{
+  "evidenceVersion": "docs-mcp-onboarding/1.0.0",
+  "id": "runtime-registry-audit",
+  "evidenceType": "LOCAL_MCP_REGISTRY_AUDIT",
+  "capturedAt": "2026-10-29T15:40:00+03:30",
+  "operation": "Inspect registered tool names, MCP resources, and MCP resource templates for a Developer Docs MCP capability.",
+  "result": {
+    "developerDocsToolNames": [],
+    "developerDocsResourceServers": [],
+    "developerDocsResourceTemplates": [],
+    "pharosChainToolPrefixPresent": "mcp__pharos__",
+    "resourceTemplateCount": 0
+  },
+  "classification": "ENVIRONMENT_LIMITATION",
+  "notes": "The available mcp__pharos__ tools are chain JSON-RPC tools, not the required documentation source. They were not used to fill documentation gaps."
+}

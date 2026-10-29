@@ -1,0 +1,8 @@
+{
+  "evidenceVersion": "docs-mcp-onboarding/1.0.0",
+  "evidenceType": "CLIENT_BUNDLE_CAPTURE_FAILURE",
+  "attempts": 2,
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "attemptedAddress": "3.174.230.61:443",
+  "interpretation": "The bounded client-bundle evidence capture timed out twice and was stopped. This is not documentation evidence and is not attributed to Docs MCP."
+}
