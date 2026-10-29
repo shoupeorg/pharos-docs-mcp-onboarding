@@ -38,3 +38,9 @@ test("raw evidence and Markdown downloads are linked", async () => {
   assert.match(html, /Download report/);
   assert.match(html, /Download gaps/);
 });
+
+test("deployment worker serves only static assets", async () => {
+  const worker = await readFile(resolve(root, "src/worker.js"), "utf8");
+  assert.match(worker, /env\.ASSETS\.fetch\(request\)/);
+  assert.doesNotMatch(worker, /fetch\s*\(\s*["'`]https?:/);
+});

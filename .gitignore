@@ -1,6 +1,7 @@
 node_modules/
 .npm-cache/
 .wrangler/
+.xdg/
 .dev.vars
 dist/
 worker.js
