@@ -1,6 +1,6 @@
 # Status
 
-Updated: 2026-10-29 (Asia/Tehran)
+Updated: 2026-10-30 (Asia/Tehran)
 
 ## Completed
 
@@ -13,6 +13,8 @@ Updated: 2026-10-29 (Asia/Tehran)
 - Audited the current MCP registry: no Developer Docs MCP tool, resource, or resource template is registered. The available Pharos MCP is chain-only and is not used as a documentation source.
 - Probed the discovered Docs-agent chat transport without browser credentials: HTTP 405 HTML, not a documentation answer.
 - Wrote the ordered log, honest zero-gap report, exact manual query set, public retro report, and versioned evidence manifest.
+- Added `final-report.md`, separating three genuine onboarding/runtime breakdowns from the still-unproven documentation-content gaps.
+- Re-checked the current tool inventory on 2026-10-30; Developer Docs MCP remains unavailable, so no content answer was fabricated.
 - Tests: 5/5 passed. Production evidence build passed.
 - Confirmed the legacy guessed endpoint `https://docs.pharosnetwork.xyz/mcp` redirects to `https://docs.pharos.xyz/mcp`, where MCP initialization is not accepted. This is transport inspection only, not documentation evidence.
 
@@ -27,6 +29,7 @@ Updated: 2026-10-29 (Asia/Tehran)
 - Create the empty public repository `shoupeorg/pharos-docs-mcp-onboarding`, then run the stage-specific resume script.
 - The script publishes the exact local commit, deploys the tested static report, and verifies the UI, evidence manifest, Markdown downloads, and logo.
 - A human must submit the saved manual query set in a working Docs MCP session before three documentation gaps or a documented read-only exercise can be claimed.
+- Publish the concise final report and sanitized evidence after the existing publication blocker is resolved.
 
 ## Constraints
 
