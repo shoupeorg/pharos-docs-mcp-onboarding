@@ -1,6 +1,6 @@
 {
-  "evidenceVersion": "docs-mcp-onboarding/1.1.0",
-  "generatedAt": "2026-10-30T00:00:00+03:30",
+  "evidenceVersion": "docs-mcp-onboarding/1.2.0",
+  "generatedAt": "2026-10-31T00:00:00+03:30",
   "sourcePolicy": "Developer Docs MCP responses only for documentation claims; transport and UI observations are labeled separately.",
   "onboarding": [
     {
@@ -60,6 +60,14 @@
       "statusClass": "blocked",
       "completedAt": "2026-10-30 (exact time unknown)",
       "file": "v1.1-user-delegation-dns-failure.json"
+    },
+    {
+      "id": "docs-agent-answer-quality",
+      "query": "Where, exactly, does a newcomer enable or select Developer Docs MCP and Pharos Chain MCP in ai.pharos.xyz, and how can the user verify which agent handled the request? Cite the exact UI instructions and source.",
+      "outcome": "UNCITED_WRONG_CLIENT_GUIDANCE",
+      "statusClass": "partial",
+      "completedAt": "UNKNOWN",
+      "file": "v1.2-docs-agent-answer.md"
     }
   ],
   "gaps": [],
@@ -68,6 +76,7 @@
     "The authenticated UI error has unknown cause and is not labeled as an MCP transport failure.",
     "The required documentation-gap count remains 0 of 3 because failures are not documentation evidence.",
     "No read-only chain exercise was run because no complete Docs MCP instruction was obtained.",
-    "The user-reported NET_001 result establishes an agent-delegation DNS failure, not a Docs MCP endpoint failure or content gap; it may or may not explain the earlier session reset."
+    "The user-reported NET_001 result establishes an agent-delegation DNS failure, not a Docs MCP endpoint failure or content gap; it may or may not explain the earlier session reset.",
+    "The full Docs-agent answer is preserved verbatim. Its claim that no documentation exists is an answer observation, not independent proof of global absence."
   ]
 }

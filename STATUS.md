@@ -1,6 +1,6 @@
 # Status
 
-Updated: 2026-10-30 (Asia/Tehran)
+Updated: 2026-10-31 (Asia/Tehran)
 
 ## Completed
 
@@ -16,6 +16,7 @@ Updated: 2026-10-30 (Asia/Tehran)
 - Added `final-report.md`, separating three genuine onboarding/runtime breakdowns from the still-unproven documentation-content gaps.
 - Re-checked the current tool inventory on 2026-10-30; Developer Docs MCP remains unavailable, so no content answer was fabricated.
 - Recorded the user-reported `NET_001` / `getaddrinfo ENOTFOUND flow.anvita.xyz` result as an agent-delegation DNS failure. It is not labeled a Docs MCP endpoint failure or content gap, and it may or may not explain the earlier session reset.
+- Preserved the full Docs-agent answer in `evidence/v1.2-docs-agent-answer.md`. It supplied uncited internal configuration and recommended Chain MCP instead of the requested Docs MCP path; this is recorded as an answer-quality breakdown, not independent proof that documentation is absent.
 - Tests: 5/5 passed. Production evidence build passed.
 - Confirmed the legacy guessed endpoint `https://docs.pharosnetwork.xyz/mcp` redirects to `https://docs.pharos.xyz/mcp`, where MCP initialization is not accepted. This is transport inspection only, not documentation evidence.
 
