@@ -1,6 +1,6 @@
 {
-  "evidenceVersion": "docs-mcp-onboarding/1.0.0",
-  "generatedAt": "2026-10-29T16:00:00+03:30",
+  "evidenceVersion": "docs-mcp-onboarding/1.1.0",
+  "generatedAt": "2026-10-30T00:00:00+03:30",
   "sourcePolicy": "Developer Docs MCP responses only for documentation claims; transport and UI observations are labeled separately.",
   "onboarding": [
     {
@@ -52,6 +52,14 @@
       "statusClass": "blocked",
       "completedAt": "2026-10-29T12:29:53.411Z",
       "file": "v1-docs-agent-transport-probe.json"
+    },
+    {
+      "id": "user-reported-agent-delegation-dns-failure",
+      "query": "Using only Developer Docs MCP sources, provide a new-user onboarding path for ai.pharos.xyz…",
+      "outcome": "NET_001 DNS FAILURE",
+      "statusClass": "blocked",
+      "completedAt": "2026-10-30 (exact time unknown)",
+      "file": "v1.1-user-delegation-dns-failure.json"
     }
   ],
   "gaps": [],
@@ -59,6 +67,7 @@
     "No complete Developer Docs MCP answer or source citation was returned.",
     "The authenticated UI error has unknown cause and is not labeled as an MCP transport failure.",
     "The required documentation-gap count remains 0 of 3 because failures are not documentation evidence.",
-    "No read-only chain exercise was run because no complete Docs MCP instruction was obtained."
+    "No read-only chain exercise was run because no complete Docs MCP instruction was obtained.",
+    "The user-reported NET_001 result establishes an agent-delegation DNS failure, not a Docs MCP endpoint failure or content gap; it may or may not explain the earlier session reset."
   ]
 }

@@ -15,9 +15,9 @@ Only Developer Docs MCP answers are acceptable sources for onboarding knowledge.
 | 3 | Test the client-observed Docs-agent route without browser credentials | `How do I start a Developer Docs MCP session on ai.pharos.xyz? Return only documentation-backed steps and source references.` | HTTP 405, `text/html; charset=utf-8`, HTML error page. | None | Credential-free POST to the client-observed `PHAROS_DOCS` chat route was rejected: `ENVIRONMENT_LIMITATION`, not a Docs MCP response. |
 | 4 | Check whether the current runtime can run missing targeted queries | `Inspect the current registered tool inventory for Developer Docs MCP or Pharos Docs MCP.` | No matching tool was registered on 2026-10-30. | None | No content query was sent because no authorized Docs MCP transport exists in this runtime. |
 
-## Three distinct onboarding breakdowns
+## Observed onboarding and investigation breakdowns
 
-These are independent breakdowns, not three claimed documentation-content gaps.
+These are separate observations, not three confirmed documentation-content gaps. The DNS failure is more specific than the earlier session-reset symptom, but the evidence does not establish independent root causes.
 
 ### 1. Developer Docs MCP is not discoverable in the current runtime
 
@@ -40,6 +40,14 @@ These are independent breakdowns, not three claimed documentation-content gaps.
 - Impact: the response does not identify the supported method, authentication contract, MCP endpoint, or recovery action.
 - Proposed fix: publish the supported Docs MCP endpoint separately from the UI chat route. Unsupported requests should return structured JSON with allowed method, authentication requirement, protocol version, and documentation reference.
 
+### 4. Agent delegation DNS failure
+
+- Exact query: `Using only Developer Docs MCP sources, provide a new-user onboarding path for ai.pharos.xyz: how to open the site, authenticate, select the Developer Docs agent, confirm the intended Pharos network, and prepare for a first read-only contract query. Cite every supporting document section or URL. If a step is not documented, label it DOCS_NOT_COVERED and do not guess. Include the exact Docs MCP tool calls and returned source references.`
+- Actual response: `Delegation to Pharos Docs MCP failed with NET_001, “Network connection failed”, detail: getaddrinfo ENOTFOUND flow.anvita.xyz.`
+- Blocked step: AI.PHAROS could not delegate the onboarding question to Pharos Docs MCP.
+- Proposed fix: restore hostname resolution for `flow.anvita.xyz` and provide a documented direct Docs MCP fallback.
+- Classification: `AGENT_DELEGATION_DNS_FAILURE`, not a Docs MCP endpoint failure and not a documentation-content gap.
+- Reassessment: this is distinct evidence from the generic session reset, but it may be the underlying cause of that reset. Without correlated request IDs or traces, it does not establish another independent root cause and does not complete the three-breakdown requirement.
 ## Documentation-gap status
 
 - Supported documentation-content gaps: **0 of 3**.
@@ -61,7 +69,7 @@ Submit these in one working Developer Docs MCP session and preserve full answers
 ## What was genuinely built or run
 
 - Built: an English feedback report, ordered evidence log, sanitized evidence manifest, and downloadable Markdown artifacts.
-- Run: local MCP registry audit, one user-performed authenticated AI.PHAROS attempt, and one bounded credential-free transport probe.
+- Run: local MCP registry audit, user-performed authenticated AI.PHAROS attempts (including one explicit delegation DNS failure), and one bounded credential-free transport probe.
 - Recorded verification: 5/5 tests passed and the production evidence build passed.
 - Still blocked: a successful Docs MCP answer, three source-supported documentation gaps, cited onboarding guidance, and a documented read-only exercise.
 - No wallet, secret, payment, transaction, database, or blockchain operation was used.
@@ -72,7 +80,7 @@ Submit these in one working Developer Docs MCP session and preserve full answers
 |---|---|
 | Chronological query/answer/error log | Met |
 | Separate UI/delegation failures from Docs MCP responses | Met |
-| Three distinct breakdowns with proposed fixes | Met as onboarding/runtime breakdowns |
+| Distinct breakdown evidence with proposed fixes | Partial: UI reset and delegation DNS error are recorded, but independent root causes are not established |
 | Three Docs-MCP-supported documentation gaps | Blocked: 0/3 |
 | Completed documented onboarding exercise | Blocked |
 | Sanitized evidence | Met locally; publication remains to be verified |

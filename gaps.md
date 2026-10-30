@@ -48,3 +48,12 @@ These are templates to use only if the corresponding manual query establishes a 
 ### PROPOSED — recovery and read-only exercise
 
 > If the session resets, preserve the error, start one new Docs session, and submit the same request once. For the first exercise, request chain ID and latest block only; expect named fields and no transaction prompt. [Replace with source-backed recovery steps and tool names.]
+
+## Added user-performed delegation evidence
+
+- Exact response: `Delegation to Pharos Docs MCP failed with NET_001, “Network connection failed”, detail: getaddrinfo ENOTFOUND flow.anvita.xyz.`
+- Classification: `AGENT_DELEGATION_DNS_FAILURE`.
+- This is not a Docs MCP endpoint failure and not a documentation-content gap.
+- It is observationally distinct from the earlier generic session reset, but an independent root cause is not established; the DNS error could be the hidden cause of that reset.
+- Proposed fix: restore hostname resolution and document a direct Developer Docs MCP fallback.
+- The three-gap/breakdown requirement therefore remains unmet.

@@ -43,3 +43,17 @@ The furthest verified step was submission of the intended onboarding question in
 - documentation sources/citations: **none returned**;
 - documented read-only exercise: **not obtained or run**;
 - distinct supported documentation gaps: **0 of 3**.
+
+## Step 4 — Agent delegation failed during hostname resolution
+
+- **Performer:** user.
+- **Exact query:**
+
+> Using only Developer Docs MCP sources, provide a new-user onboarding path for ai.pharos.xyz: how to open the site, authenticate, select the Developer Docs agent, confirm the intended Pharos network, and prepare for a first read-only contract query. Cite every supporting document section or URL. If a step is not documented, label it DOCS_NOT_COVERED and do not guess. Include the exact Docs MCP tool calls and returned source references.
+
+- **Actual response:** `Delegation to Pharos Docs MCP failed with NET_001, “Network connection failed”, detail: getaddrinfo ENOTFOUND flow.anvita.xyz.`
+- **Blocked step:** AI.PHAROS could not delegate the question to Pharos Docs MCP; no documentation query completed.
+- **Classification:** `AGENT_DELEGATION_DNS_FAILURE` at the AI.PHAROS delegation layer. This does not establish a Docs MCP endpoint failure or documentation-content gap.
+- **Suggested fix:** restore hostname resolution for `flow.anvita.xyz` and provide a documented direct Docs MCP fallback.
+- **Relationship to prior reset:** this is a distinct observation with a specific DNS error, but independence of root cause is not established. Without a shared request ID, timestamp, or trace, it may explain the earlier generic reset or may be a separate attempt.
+- **Evidence:** `evidence/v1.1-user-delegation-dns-failure.json`.

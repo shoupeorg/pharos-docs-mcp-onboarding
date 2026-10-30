@@ -1,0 +1,28 @@
+{
+  "evidenceVersion": "docs-mcp-onboarding/1.1.0",
+  "id": "user-reported-agent-delegation-dns-failure",
+  "evidenceType": "USER_REPORTED_AGENT_DELEGATION_ERROR",
+  "source": "Exact result supplied by the user",
+  "recordedAt": "2026-10-30T00:00:00+03:30",
+  "recordedAtPrecision": "date-only; exact attempt time not supplied",
+  "query": "Using only Developer Docs MCP sources, provide a new-user onboarding path for ai.pharos.xyz: how to open the site, authenticate, select the Developer Docs agent, confirm the intended Pharos network, and prepare for a first read-only contract query. Cite every supporting document section or URL. If a step is not documented, label it DOCS_NOT_COVERED and do not guess. Include the exact Docs MCP tool calls and returned source references.",
+  "actualResponse": "Delegation to Pharos Docs MCP failed with NET_001, “Network connection failed”, detail: getaddrinfo ENOTFOUND flow.anvita.xyz.",
+  "error": {
+    "code": "NET_001",
+    "message": "Network connection failed",
+    "detail": "getaddrinfo ENOTFOUND flow.anvita.xyz"
+  },
+  "classification": "AGENT_DELEGATION_DNS_FAILURE",
+  "causeLayer": "AI.PHAROS agent delegation hostname resolution",
+  "docsMcpEndpointFailureEstablished": false,
+  "documentationContentGapEstablished": false,
+  "blockedStep": "Delegation from AI.PHAROS to Pharos Docs MCP; no documentation query completed.",
+  "suggestedFix": "Restore hostname resolution for flow.anvita.xyz and publish a documented direct Developer Docs MCP fallback path.",
+  "relationshipToSessionReset": {
+    "distinctObservation": true,
+    "independentRootCauseEstablished": false,
+    "assessment": "The earlier session reset exposed only a generic UI symptom with unknown cause. This record exposes a DNS failure at the agent-delegation layer. Without a shared request ID, timestamp, or trace, the evidence cannot establish whether the DNS failure caused that reset or occurred in a separate attempt."
+  },
+  "countsAsDocumentationGap": false,
+  "countsAsThirdIndependentBreakdown": false
+}
